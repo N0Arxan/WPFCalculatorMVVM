@@ -8,6 +8,11 @@ using System.Windows.Input;
 
 namespace CalculatorApp.ViewModels
 {
+    /// <summary>
+    /// ViewModel for the Calculator. This class manages the application's state and logic,
+    /// acting as the intermediary between the View (UI) and the Model (calculation engine).
+    /// It exposes properties and commands for data binding in the XAML.
+    /// </summary>
     public class CalculatorViewModel : ObservableObject
     {
         private readonly CalculatorModel _calculator;
@@ -15,7 +20,11 @@ namespace CalculatorApp.ViewModels
         private bool _isNewEntry = true;
         private bool _isErrorState = false;
 
-        // The text displayed on the calculator's screen.
+        /// <summary>
+        /// Gets or sets the text to be displayed on the calculator screen.
+        /// This property is bound to the main TextBlock in the UI. When its value
+        /// changes, it notifies the UI to update.
+        /// </summary>
         public string DisplayText
         {
             get => _displayText;
@@ -26,12 +35,27 @@ namespace CalculatorApp.ViewModels
             }
         }
 
-        // Commands for the calculator buttons.
+        /// <summary>
+        /// Gets the command to append a number or decimal point to the display.
+        /// </summary>
         public ICommand AppendCommand { get; }
+        /// <summary>
+        /// Gets the command to apply a mathematical operator.
+        /// </summary>
         public ICommand OperatorCommand { get; }
+        /// <summary>
+        /// Gets the command to calculate a mathematical operation.
+        /// </summary>
         public ICommand CalculateCommand { get; }
+        /// <summary>
+        /// Gets the command to clear the calculator's state and display.
+        /// </summary>
         public ICommand ClearCommand { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CalculatorViewModel"/> class.
+        /// Sets up the calculator model and initializes the ICommand properties.
+        /// </summary>
         public CalculatorViewModel()
         {
             _calculator = new CalculatorModel();
@@ -42,7 +66,10 @@ namespace CalculatorApp.ViewModels
             ClearCommand = new RelayCommand(Clear);
         }
 
-        // Resets the calculator to its initial state.
+        /// <summary>
+        /// Resets the calculator to its default state.
+        /// </summary>
+        /// <param name="obj">Unused command parameter.</param>
         private void Clear(object obj)
         {
             DisplayText = "0";
@@ -50,7 +77,10 @@ namespace CalculatorApp.ViewModels
             _isErrorState = false;
         }
 
-        // Appends a number or a decimal point to the display.
+        /// <summary>
+        /// Appends a digit or decimal point to the current display text.
+        /// </summary>
+        /// <param name="parameter">The string representation of the digit or "." to append.</param>
         private void Append(object parameter)
         {
             if (_isErrorState) Clear(null);
@@ -69,7 +99,10 @@ namespace CalculatorApp.ViewModels
             }
         }
 
-        // Applies an operator (+, -, ×, ÷)
+        /// <summary>
+        /// Appends a mathematical operator to the expression.
+        /// </summary>
+        /// <param name="parameter">The string representation of the operator to apply.</param>
         private void ApplyOperator(object parameter)
         {
             if (_isErrorState) Clear(null);
@@ -90,7 +123,13 @@ namespace CalculatorApp.ViewModels
             }
         }
 
-        // Performs the calculation when '=' is pressed.
+       
+        /// <summary>
+        /// Evaluates the current expression and displays the result.
+        /// Calls the model's Evaluate method and handles any exceptions by
+        /// setting the display to an "Error" state.
+        /// </summary>
+        /// <param name="obj">Unused command parameter.</param>
         private void Calculate(object obj)
         {
             try
@@ -111,7 +150,11 @@ namespace CalculatorApp.ViewModels
             }
         }
 
-        // Determines if the '=' button should be enabled.
+        /// <summary>
+        /// Determines whether the 'Equals' command can be executed.
+        /// </summary>
+        /// <param name="obj">Unused command parameter.</param>
+        /// <returns>True if the expression is in a valid state to be calculated.</returns>
         private bool CanCalculate(object obj)
         {
             // Prevents calculation if the expression is invalid, e.g., "5 +"
@@ -124,6 +167,11 @@ namespace CalculatorApp.ViewModels
             return !IsOperator(lastChar);
         }
 
+        /// <summary>
+        /// Helper method to check if a character is an operator.
+        /// </summary>
+        /// <param name="c">The character to check.</param>
+        /// <returns>True if the character is a valid operator.</returns>
         private bool IsOperator(char c)
         {
             return "+-×÷".Contains(c);

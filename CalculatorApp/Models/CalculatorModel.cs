@@ -5,17 +5,23 @@ using System.Linq;
 
 namespace CalculatorApp.Models
 {
-     /// <summary>
-    /// Handles the core calculation logic for the calculator using the Shunting-yard algorithm.
-    /// This provides fine-grained control over expression evaluation, including custom error handling.
+    /// <summary>
+    /// Core calculation engine for the calculator.
+    /// This class implements the Shunting-yard algorithm to parse and evaluate
+    /// mathematical expressions from an infix notation string. It correctly handles
+    /// operator precedence and provides specific error handling for invalid operations,
+    /// such as division by zero.
     /// </summary>
     public class CalculatorModel
     {
         /// <summary>
-        /// Evaluates a given mathematical expression string.
+        /// Evaluates a mathematical expression provided in infix notation.
         /// </summary>
-        /// <param name="expression">The infix mathematical expression (e.g., "5*2+10").</param>
-        /// <returns>The result of the calculation as a double.</returns>
+        /// <param name="expression">The mathematical expression string (e.g., "3+5*2").</param>
+        /// <returns>A double representing the calculated result.</returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown if the expression is malformed, contains a syntax error, or involves an invalid operation like division by zero.
+        /// </exception>
         public double Evaluate(string expression)
         {
             try
@@ -41,10 +47,13 @@ namespace CalculatorApp.Models
                 throw new InvalidOperationException("Invalid Expression");
             }
         }
-
+        
         /// <summary>
-        /// Converts an infix expression string to a queue of tokens in Reverse Polish Notation (RPN).
+        /// Converts an infix expression to a Reverse Polish Notation (RPN) queue.
+        /// Implements the Shunting-yard algorithm to reorder tokens based on operator precedence.
         /// </summary>
+        /// <param name="infix">The expression string in infix notation.</param>
+        /// <returns>A queue of strings representing the expression in RPN.</returns>
         private Queue<string> ToReversePolishNotation(string infix)
         {
             var outputQueue = new Queue<string>();
@@ -76,8 +85,10 @@ namespace CalculatorApp.Models
         }
 
         /// <summary>
-        /// Evaluates a queue of tokens in RPN format.
+        /// Evaluates an expression stored in a Reverse Polish Notation (RPN) queue.
         /// </summary>
+        /// <param name="rpnQueue">The queue of tokens in RPN format.</param>
+        /// <returns>The final calculated result as a double.</returns>
         private double EvaluateRpn(Queue<string> rpnQueue)
         {
             var operandStack = new Stack<double>();
@@ -107,8 +118,10 @@ namespace CalculatorApp.Models
         }
 
         /// <summary>
-        /// A tokenizer to split the expression into numbers and operators.
+        /// Splits the raw expression string into a list of numbers and operators.
         /// </summary>
+        /// <param name="expression">The raw input string from the calculator display.</param>
+        /// <returns>A list of strings, where each string is a number or an operator.</returns>
         private List<string> Tokenize(string expression)
         {
             var tokens = new List<string>();
@@ -137,10 +150,15 @@ namespace CalculatorApp.Models
             return tokens;
         }
 
+
         /// <summary>
-        /// Applies a mathematical operation to two operands.
-        /// This is where we explicitly check for division by zero.
+        /// Applies a single mathematical operation to two operands.
         /// </summary>
+        /// <param name="op">The character representing the operator (+, -, ×, ÷).</param>
+        /// <param name="a">The first operand (left-hand side).</param>
+        /// <param name="b">The second operand (right-hand side).</param>
+        /// <returns>The result of the operation.</returns>
+        /// <exception cref="DivideByZeroException">Thrown specifically when attempting to divide by zero.</exception>
         private double ApplyOperation(char op, double a, double b)
         {
             switch (op)
@@ -160,7 +178,18 @@ namespace CalculatorApp.Models
             }
         }
         
+        /// <summary>
+        /// Checks if a character is a valid operator.
+        /// </summary>
+        /// <param name="c">The character to check.</param>
+        /// <returns>True if the character is one of +, -, ×, or ÷.</returns>
         private bool IsOperator(char c) => "+-×÷".Contains(c);
+        
+        /// <summary>
+        /// Determines the precedence of a mathematical operator.
+        /// </summary>
+        /// <param name="op">The operator character.</param>
+        /// <returns>An integer representing precedence (2 for ×/÷, 1 for +/-).</returns>
         private int GetPrecedence(char op) => (op == '+' || op == '-') ? 1 : 2;
     }
 }
