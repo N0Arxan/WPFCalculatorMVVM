@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['initializecomponent',['InitializeComponent',['../class_calculator_app_1_1_app.html#a0e1dcd38e7ae9d9e6e7bfefc1ba3d4cf',1,'CalculatorApp.App.InitializeComponent()'],['../class_calculator_app_1_1_app.html#a0e1dcd38e7ae9d9e6e7bfefc1ba3d4cf',1,'CalculatorApp.App.InitializeComponent()'],['../class_calculator_app_1_1_main_window.html#ac97da3045cf5e0b9cc9df4a16c20511a',1,'CalculatorApp.MainWindow.InitializeComponent()'],['../class_calculator_app_1_1_views_1_1_main_window.html#a8fdf50cfa9f3e98e81d53c094ed3a960',1,'CalculatorApp.Views.MainWindow.InitializeComponent()'],['../class_calculator_app_1_1_views_1_1_main_window.html#a8fdf50cfa9f3e98e81d53c094ed3a960',1,'CalculatorApp.Views.MainWindow.InitializeComponent()'],['../class_calculator_app_1_1_app.html#a0e1dcd38e7ae9d9e6e7bfefc1ba3d4cf',1,'CalculatorApp.App.InitializeComponent()'],['../class_calculator_app_1_1_views_1_1_main_window.html#a8fdf50cfa9f3e98e81d53c094ed3a960',1,'CalculatorApp.Views.MainWindow.InitializeComponent()']]]
+  ['evaluate',['Evaluate',['../class_calculator_app_1_1_models_1_1_calculator_model.html#a4de1361a5f36e13c9ff21231e3bdb5c4',1,'CalculatorApp::Models::CalculatorModel']]],
+  ['evaluaterpn',['EvaluateRpn',['../class_calculator_app_1_1_models_1_1_calculator_model.html#a7f912fe85cf04017cf908f147ad97720',1,'CalculatorApp::Models::CalculatorModel']]],
+  ['execute',['Execute',['../class_calculator_app_1_1_view_models_1_1_relay_command.html#a0d705d72e898a6c32c3feb687a627b05',1,'CalculatorApp::ViewModels::RelayCommand']]]
 ];

@@ -8,6 +8,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DocumentationFile>bin\Debug\net8.0-windows\PAC4-CalculadoraDoc.xml</DocumentationFile>
+	</PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Doxygen" Version="1.8.14">
       <PrivateAssets>all</PrivateAssets>

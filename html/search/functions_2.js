@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evaluate',['Evaluate',['../class_calculator_app_1_1_models_1_1_calculator_model.html#a4de1361a5f36e13c9ff21231e3bdb5c4',1,'CalculatorApp::Models::CalculatorModel']]]
+  ['dwmsetwindowattribute',['DwmSetWindowAttribute',['../class_calculator_app_1_1_view_models_1_1_window_util.html#a462b716ea93ccb55e970d5ab589a02f1',1,'CalculatorApp::ViewModels::WindowUtil']]]
 ];

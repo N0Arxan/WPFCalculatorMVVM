@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Calculator: Main Page</title>
+<title>Calculator: 🧮 WPF Modern Calculator</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,10 +62,129 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Calculator Documentation</div>  </div>
+<div class="title">🧮 WPF Modern Calculator </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>A sleek, modern calculator built with C# and WPF, following the MVVM (Model-View-ViewModel) architectural pattern. It provides standard calculation functionalities with a focus on clean design and intuitive user experience. </p><hr/>
+<h2>©️ License &amp; Authorship</h2>
+<p><b>Author:</b> Arshan(N0Arxan)</p>
+<p><b>License:</b> This project is licensed under the MIT License. </p><hr/>
+<h2>📑 Table of Contents</h2>
+<ul>
+<li><a href="#-system-requirements">⚙️ System Requirements</a> <br />
+- <a href="#-main-features">✨ Main Features</a> <br />
+- <a href="#-installation-guide">🚀 Installation Guide</a> <br />
+- <a href="#-user-guide">📖 User Guide</a> <br />
+- <a href="#-usage-examples--screenshots">📸 Usage Examples &amp; Screenshots</a> <br />
+- <a href="#-conclusions">💡 Conclusions</a> <br />
+<hr/>
+</li>
+</ul>
+<h2>⚙️ System Requirements</h2>
+<ul>
+<li><b>Operating System:</b> Windows 7 or later <br />
+- **.NET Framework:** .NET 8.0 (or the version you compiled with) <br />
+- <b>IDE (for development):</b> Visual Studio 2022 <br />
+<hr/>
+</li>
+</ul>
+<h2>✨ Main Features</h2>
+<ul>
+<li><b>Intuitive Interface:</b> A clean and modern UI with responsive buttons. <br />
+- <b>Standard Operations:</b> Supports Addition (+), Subtraction (−), Multiplication (×), and Division (÷). <br />
+- <b>Chained Operations:</b> Perform multiple calculations in a sequence (e.g., <code>10 * 2 − 5</code>). <br />
+- <b>Operator Precedence:</b> Automatically handles the correct order of operations (multiplication/division before addition/subtraction). <br />
+- <b>Error Handling:</b> Displays an “Error” message for invalid operations, like dividing by zero or malformed expressions. <br />
+- <b>Reset Functionality:</b> A “C” button to clear the current state and start fresh. <br />
+- <b>MVVM Architecture:</b> Clean separation of concerns between the UI (View), the application logic (ViewModel), and the data/business logic (Model). <br />
+<hr/>
+</li>
+</ul>
+<h2>🚀 Installation Guide</h2>
+<ol type="1">
+<li><b>Clone the Repository:</b> <br />
+ ```bash git clone <a href="https://github.com/your-username/WpfCalculator.git">https://github.com/your-username/WpfCalculator.git</a></li>
+<li><b>Open in Visual Studio:</b><ul>
+<li>Navigate to the cloned directory.</li>
+<li>Open <code>Calculator.sln</code> with Visual Studio 2022 or Rider.</li>
+</ul>
+</li>
+<li><b>Build the Solution:</b><ul>
+<li>In Visual Studio, go to <b>Build ➔ Build Solution</b> (or press <code>Ctrl+Shift+B</code>).</li>
+</ul>
+</li>
+<li><b>Run the Application:</b><ul>
+<li>Press the green <b>Start</b> button or press <code>F5</code> to run the project. <hr/>
+</li>
+</ul>
+</li>
+</ol>
+<h2>📖 User Guide</h2>
+<p>Using the calculator is straightforward:</p>
+<ol type="1">
+<li><b>Inputting Numbers:</b><ul>
+<li>Click the number buttons (<code>0–9</code>) to form an operand.</li>
+</ul>
+</li>
+<li><b>Adding a Decimal:</b><ul>
+<li>Use the <code>.</code> button to add a decimal point (only one decimal point per number is allowed).</li>
+</ul>
+</li>
+<li><b>Performing Operations:</b><ul>
+<li>Click an operator button (<code>+</code>, <code>−</code>, <code>×</code>, <code>÷</code>) to add it to the expression.</li>
+<li>You can chain operations together (e.g., <code>5</code>, <code>×</code>, <code>5</code>, <code>+</code>, <code>10</code>).</li>
+</ul>
+</li>
+<li><b>Calculating the Result:</b><ul>
+<li>Press the <code>=</code> button to evaluate the entire expression. The result will be displayed.</li>
+</ul>
+</li>
+<li><b>Clearing the Display:</b><ul>
+<li>Press the <code>C</code> button at any time to reset the calculator to its initial state.</li>
+</ul>
+</li>
+<li><b>Error States:</b><ul>
+<li>If you enter an invalid expression (e.g., <code>8 ÷ 0</code>), the display will show <b>Error</b>.</li>
+<li>Press <code>C</code> to continue. <hr/>
+</li>
+</ul>
+</li>
+</ol>
+<h2>📸 Usage Examples &amp; Screenshots</h2>
+<p>Below are examples of how the calculator handles different scenarios. Replace the image paths with your actual screenshot filenames.</p>
+<h3>Scenario 1: Chained Operation with Precedence</h3>
+<ul>
+<li><b>Input:</b> <code>5 + 2 × 10 =</code></li>
+<li><b>Result:</b> <code>25</code></li>
+</ul>
+<div class="image">
+<img src="screenshots/1.png" alt="Chained Operation with Precedence"/>
+</div>
+ <div class="image">
+<img src="screenshots/2.png" alt="Chained Operation with Precedence"/>
+</div>
+ <hr/>
+<h3>Scenario 3: Error Handling</h3>
+<ul>
+<li><b>Input:</b> <code>8 / 0 =</code></li>
+<li><b>Result:</b> <code>Error</code></li>
+</ul>
+<div class="image">
+<img src="screenshots/3.png" alt="Error Example"/>
+</div>
+ <div class="image">
+<img src="screenshots/4.png" alt="Error Example"/>
+</div>
+ <hr/>
+<h2>💡 Conclusions</h2>
+<p>This project serves as a practical demonstration of the MVVM pattern in a WPF application. Key takeaways include:</p>
+<ul>
+<li><b>Separation of Concerns:</b> MVVM makes the code easier to manage, test, and debug by isolating the UI from the logic. The View is “dumb,” the ViewModel handles state, and the Model performs the core work.</li>
+<li><b>Data Binding:</b> WPF’s powerful data binding engine is the glue that connects the View and ViewModel, reducing the need for manual UI manipulation from the code-behind.</li>
+<li><b>Styling and Reusability:</b> Using a <code>ResourceDictionary</code> for styles and colors keeps the UI definition clean and allows for consistent, reusable components.</li>
+</ul>
+<p>This project can be extended with more advanced features such as memory functions (M+, M−, MR), scientific operations, and theming capabilities. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

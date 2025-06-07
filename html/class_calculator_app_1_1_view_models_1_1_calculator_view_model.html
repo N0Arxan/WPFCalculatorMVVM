@@ -66,53 +66,544 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_calculator_app_1_1_view_models_1_1_calculator_view_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CalculatorApp.ViewModels.CalculatorViewModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>ViewModel for the Calculator. This class manages the application's state and logic, acting as the intermediary between the View (UI) and the Model (calculation engine). It exposes properties and commands for data binding in the XAML.  
+ <a href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CalculatorApp.ViewModels.CalculatorViewModel:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_calculator_app_1_1_view_models_1_1_calculator_view_model.png" usemap="#CalculatorApp.ViewModels.CalculatorViewModel_map" alt=""/>
   <map id="CalculatorApp.ViewModels.CalculatorViewModel_map" name="CalculatorApp.ViewModels.CalculatorViewModel_map">
-<area href="class_calculator_app_1_1_view_models_1_1_observable_object.html" title="A base class for ViewModels that implements the INotifyPropertyChanged interface. This is crucial for..." alt="CalculatorApp.ViewModels.ObservableObject" shape="rect" coords="0,56,291,80"/>
+<area href="class_calculator_app_1_1_view_models_1_1_observable_object.html" title="A base class for objects that implements INotifyPropertyChanged. This simplifies the process of creat..." alt="CalculatorApp.ViewModels.ObservableObject" shape="rect" coords="0,56,291,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aacc96bfa306b82e5d3c31ec07b0fb2de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#aacc96bfa306b82e5d3c31ec07b0fb2de">CalculatorViewModel</a> ()</td></tr>
+<tr class="memdesc:aacc96bfa306b82e5d3c31ec07b0fb2de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html" title="ViewModel for the Calculator. This class manages the application&#39;s state and logic, acting as the intermediary between the View (UI) and the Model (calculation engine). It exposes properties and commands for data binding in the XAML. ">CalculatorViewModel</a> class. Sets up the calculator model and initializes the ICommand properties.  <a href="#aacc96bfa306b82e5d3c31ec07b0fb2de">More...</a><br /></td></tr>
+<tr class="separator:aacc96bfa306b82e5d3c31ec07b0fb2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a943c29fd577581792f93059002337c85"><td class="memItemLeft" align="right" valign="top"><a id="a943c29fd577581792f93059002337c85"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayText</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a943c29fd577581792f93059002337c85"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a943c29fd577581792f93059002337c85">DisplayText</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a943c29fd577581792f93059002337c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the text to be displayed on the calculator screen. This property is bound to the main TextBlock in the UI. When its value changes, it notifies the UI to update.  <a href="#a943c29fd577581792f93059002337c85">More...</a><br /></td></tr>
 <tr class="separator:a943c29fd577581792f93059002337c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c53ccdf78f71c12d08061203938cbd5"><td class="memItemLeft" align="right" valign="top"><a id="a1c53ccdf78f71c12d08061203938cbd5"></a>
-ICommand&#160;</td><td class="memItemRight" valign="bottom"><b>AppendCommand</b><code> [get]</code></td></tr>
+<tr class="memitem:a1c53ccdf78f71c12d08061203938cbd5"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a1c53ccdf78f71c12d08061203938cbd5">AppendCommand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1c53ccdf78f71c12d08061203938cbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the command to append a number or decimal point to the display.  <a href="#a1c53ccdf78f71c12d08061203938cbd5">More...</a><br /></td></tr>
 <tr class="separator:a1c53ccdf78f71c12d08061203938cbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41b156157aca9cf81162f82c47d168c8"><td class="memItemLeft" align="right" valign="top"><a id="a41b156157aca9cf81162f82c47d168c8"></a>
-ICommand&#160;</td><td class="memItemRight" valign="bottom"><b>OperatorCommand</b><code> [get]</code></td></tr>
+<tr class="memitem:a41b156157aca9cf81162f82c47d168c8"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a41b156157aca9cf81162f82c47d168c8">OperatorCommand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a41b156157aca9cf81162f82c47d168c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the command to apply a mathematical operator.  <a href="#a41b156157aca9cf81162f82c47d168c8">More...</a><br /></td></tr>
 <tr class="separator:a41b156157aca9cf81162f82c47d168c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8a36e988873c3bc5ca19b2ccb41523"><td class="memItemLeft" align="right" valign="top"><a id="a0b8a36e988873c3bc5ca19b2ccb41523"></a>
-ICommand&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateCommand</b><code> [get]</code></td></tr>
+<tr class="memitem:a0b8a36e988873c3bc5ca19b2ccb41523"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a0b8a36e988873c3bc5ca19b2ccb41523">CalculateCommand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0b8a36e988873c3bc5ca19b2ccb41523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the command to calculate a mathematical operation.  <a href="#a0b8a36e988873c3bc5ca19b2ccb41523">More...</a><br /></td></tr>
 <tr class="separator:a0b8a36e988873c3bc5ca19b2ccb41523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba553722c11328c784a724aafb1905f"><td class="memItemLeft" align="right" valign="top"><a id="a1ba553722c11328c784a724aafb1905f"></a>
-ICommand&#160;</td><td class="memItemRight" valign="bottom"><b>ClearCommand</b><code> [get]</code></td></tr>
+<tr class="memitem:a1ba553722c11328c784a724aafb1905f"><td class="memItemLeft" align="right" valign="top">ICommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a1ba553722c11328c784a724aafb1905f">ClearCommand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1ba553722c11328c784a724aafb1905f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the command to clear the calculator's state and display.  <a href="#a1ba553722c11328c784a724aafb1905f">More...</a><br /></td></tr>
 <tr class="separator:a1ba553722c11328c784a724aafb1905f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a24d766e87125e308524695eeabf7b713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a24d766e87125e308524695eeabf7b713">Clear</a> (object obj)</td></tr>
+<tr class="memdesc:a24d766e87125e308524695eeabf7b713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the calculator to its default state.  <a href="#a24d766e87125e308524695eeabf7b713">More...</a><br /></td></tr>
+<tr class="separator:a24d766e87125e308524695eeabf7b713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2f1b31cebc21d2dab8f568c1d4185c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a0c2f1b31cebc21d2dab8f568c1d4185c">Append</a> (object parameter)</td></tr>
+<tr class="memdesc:a0c2f1b31cebc21d2dab8f568c1d4185c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a digit or decimal point to the current display text.  <a href="#a0c2f1b31cebc21d2dab8f568c1d4185c">More...</a><br /></td></tr>
+<tr class="separator:a0c2f1b31cebc21d2dab8f568c1d4185c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cdb891d72a09c36b862203e822de36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a35cdb891d72a09c36b862203e822de36">ApplyOperator</a> (object parameter)</td></tr>
+<tr class="memdesc:a35cdb891d72a09c36b862203e822de36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a mathematical operator to the expression.  <a href="#a35cdb891d72a09c36b862203e822de36">More...</a><br /></td></tr>
+<tr class="separator:a35cdb891d72a09c36b862203e822de36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f5106a6d03cd097c5e61ba802fe14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a80f5106a6d03cd097c5e61ba802fe14e">Calculate</a> (object obj)</td></tr>
+<tr class="memdesc:a80f5106a6d03cd097c5e61ba802fe14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the current expression and displays the result. Calls the model's Evaluate method and handles any exceptions by setting the display to an "Error" state.  <a href="#a80f5106a6d03cd097c5e61ba802fe14e">More...</a><br /></td></tr>
+<tr class="separator:a80f5106a6d03cd097c5e61ba802fe14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b7e87fa2df54dd3786b2425a51a744"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a94b7e87fa2df54dd3786b2425a51a744">CanCalculate</a> (object obj)</td></tr>
+<tr class="memdesc:a94b7e87fa2df54dd3786b2425a51a744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether the 'Equals' command can be executed.  <a href="#a94b7e87fa2df54dd3786b2425a51a744">More...</a><br /></td></tr>
+<tr class="separator:a94b7e87fa2df54dd3786b2425a51a744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717a7a151992f7c1f406d480edb63b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a717a7a151992f7c1f406d480edb63b7d">IsOperator</a> (char c)</td></tr>
+<tr class="memdesc:a717a7a151992f7c1f406d480edb63b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method to check if a character is an operator.  <a href="#a717a7a151992f7c1f406d480edb63b7d">More...</a><br /></td></tr>
+<tr class="separator:a717a7a151992f7c1f406d480edb63b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1286e55200a1d374e0884af6d082f87e"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html">CalculatorModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a1286e55200a1d374e0884af6d082f87e">_calculator</a></td></tr>
+<tr class="separator:a1286e55200a1d374e0884af6d082f87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a2745d2b2098120bc585b1a3f5cdd8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a53a2745d2b2098120bc585b1a3f5cdd8">_displayText</a> = &quot;0&quot;</td></tr>
+<tr class="separator:a53a2745d2b2098120bc585b1a3f5cdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ba4de553e0d91e80d5c5bd873bc2e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#aa6ba4de553e0d91e80d5c5bd873bc2e4">_isNewEntry</a> = true</td></tr>
+<tr class="separator:aa6ba4de553e0d91e80d5c5bd873bc2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056395d2ca3ccf5d7947d228ad94d136"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a056395d2ca3ccf5d7947d228ad94d136">_isErrorState</a> = false</td></tr>
+<tr class="separator:a056395d2ca3ccf5d7947d228ad94d136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_calculator_app_1_1_view_models_1_1_observable_object.html">CalculatorApp.ViewModels.ObservableObject</a></td></tr>
-<tr class="memitem:af23408b2672894ef8a9871bf114aa6c2 inherit pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memItemLeft" align="right" valign="top"><a id="af23408b2672894ef8a9871bf114aa6c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPropertyChanged</b> ([CallerMemberName] string propertyName=null)</td></tr>
+<tr class="memitem:af23408b2672894ef8a9871bf114aa6c2 inherit pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_observable_object.html#af23408b2672894ef8a9871bf114aa6c2">OnPropertyChanged</a> ([CallerMemberName] string propertyName=null)</td></tr>
+<tr class="memdesc:af23408b2672894ef8a9871bf114aa6c2 inherit pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises the <a class="el" href="class_calculator_app_1_1_view_models_1_1_observable_object.html#a94ce55145019efcf67dbce3f8df3d90a" title="Occurs when a property value changes. ">PropertyChanged</a> event.  <a href="class_calculator_app_1_1_view_models_1_1_observable_object.html#af23408b2672894ef8a9871bf114aa6c2">More...</a><br /></td></tr>
 <tr class="separator:af23408b2672894ef8a9871bf114aa6c2 inherit pro_methods_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header events_class_calculator_app_1_1_view_models_1_1_observable_object"><td colspan="2" onclick="javascript:toggleInherit('events_class_calculator_app_1_1_view_models_1_1_observable_object')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="class_calculator_app_1_1_view_models_1_1_observable_object.html">CalculatorApp.ViewModels.ObservableObject</a></td></tr>
-<tr class="memitem:a94ce55145019efcf67dbce3f8df3d90a inherit events_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memItemLeft" align="right" valign="top"><a id="a94ce55145019efcf67dbce3f8df3d90a"></a>
-PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><b>PropertyChanged</b></td></tr>
+<tr class="memitem:a94ce55145019efcf67dbce3f8df3d90a inherit events_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memItemLeft" align="right" valign="top">PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_view_models_1_1_observable_object.html#a94ce55145019efcf67dbce3f8df3d90a">PropertyChanged</a></td></tr>
+<tr class="memdesc:a94ce55145019efcf67dbce3f8df3d90a inherit events_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occurs when a property value changes.  <a href="class_calculator_app_1_1_view_models_1_1_observable_object.html#a94ce55145019efcf67dbce3f8df3d90a">More...</a><br /></td></tr>
 <tr class="separator:a94ce55145019efcf67dbce3f8df3d90a inherit events_class_calculator_app_1_1_view_models_1_1_observable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ViewModel for the Calculator. This class manages the application's state and logic, acting as the intermediary between the View (UI) and the Model (calculation engine). It exposes properties and commands for data binding in the XAML. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aacc96bfa306b82e5d3c31ec07b0fb2de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc96bfa306b82e5d3c31ec07b0fb2de">&#9670;&nbsp;</a></span>CalculatorViewModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CalculatorApp.ViewModels.CalculatorViewModel.CalculatorViewModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_calculator_app_1_1_view_models_1_1_calculator_view_model.html" title="ViewModel for the Calculator. This class manages the application&#39;s state and logic, acting as the intermediary between the View (UI) and the Model (calculation engine). It exposes properties and commands for data binding in the XAML. ">CalculatorViewModel</a> class. Sets up the calculator model and initializes the ICommand properties. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c2f1b31cebc21d2dab8f568c1d4185c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2f1b31cebc21d2dab8f568c1d4185c">&#9670;&nbsp;</a></span>Append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalculatorApp.ViewModels.CalculatorViewModel.Append </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a digit or decimal point to the current display text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>The string representation of the digit or "." to append.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35cdb891d72a09c36b862203e822de36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cdb891d72a09c36b862203e822de36">&#9670;&nbsp;</a></span>ApplyOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalculatorApp.ViewModels.CalculatorViewModel.ApplyOperator </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a mathematical operator to the expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>The string representation of the operator to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80f5106a6d03cd097c5e61ba802fe14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f5106a6d03cd097c5e61ba802fe14e">&#9670;&nbsp;</a></span>Calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalculatorApp.ViewModels.CalculatorViewModel.Calculate </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluates the current expression and displays the result. Calls the model's Evaluate method and handles any exceptions by setting the display to an "Error" state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Unused command parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94b7e87fa2df54dd3786b2425a51a744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b7e87fa2df54dd3786b2425a51a744">&#9670;&nbsp;</a></span>CanCalculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CalculatorApp.ViewModels.CalculatorViewModel.CanCalculate </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines whether the 'Equals' command can be executed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Unused command parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the expression is in a valid state to be calculated.</dd></dl>
+
+</div>
+</div>
+<a id="a24d766e87125e308524695eeabf7b713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d766e87125e308524695eeabf7b713">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalculatorApp.ViewModels.CalculatorViewModel.Clear </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the calculator to its default state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Unused command parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a717a7a151992f7c1f406d480edb63b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717a7a151992f7c1f406d480edb63b7d">&#9670;&nbsp;</a></span>IsOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CalculatorApp.ViewModels.CalculatorViewModel.IsOperator </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper method to check if a character is an operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the character is a valid operator.</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1286e55200a1d374e0884af6d082f87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1286e55200a1d374e0884af6d082f87e">&#9670;&nbsp;</a></span>_calculator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html">CalculatorModel</a> CalculatorApp.ViewModels.CalculatorViewModel._calculator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53a2745d2b2098120bc585b1a3f5cdd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a2745d2b2098120bc585b1a3f5cdd8">&#9670;&nbsp;</a></span>_displayText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CalculatorApp.ViewModels.CalculatorViewModel._displayText = &quot;0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a056395d2ca3ccf5d7947d228ad94d136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056395d2ca3ccf5d7947d228ad94d136">&#9670;&nbsp;</a></span>_isErrorState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CalculatorApp.ViewModels.CalculatorViewModel._isErrorState = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6ba4de553e0d91e80d5c5bd873bc2e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ba4de553e0d91e80d5c5bd873bc2e4">&#9670;&nbsp;</a></span>_isNewEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CalculatorApp.ViewModels.CalculatorViewModel._isNewEntry = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a1c53ccdf78f71c12d08061203938cbd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c53ccdf78f71c12d08061203938cbd5">&#9670;&nbsp;</a></span>AppendCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand CalculatorApp.ViewModels.CalculatorViewModel.AppendCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the command to append a number or decimal point to the display. </p>
+
+</div>
+</div>
+<a id="a0b8a36e988873c3bc5ca19b2ccb41523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8a36e988873c3bc5ca19b2ccb41523">&#9670;&nbsp;</a></span>CalculateCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand CalculatorApp.ViewModels.CalculatorViewModel.CalculateCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the command to calculate a mathematical operation. </p>
+
+</div>
+</div>
+<a id="a1ba553722c11328c784a724aafb1905f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba553722c11328c784a724aafb1905f">&#9670;&nbsp;</a></span>ClearCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand CalculatorApp.ViewModels.CalculatorViewModel.ClearCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the command to clear the calculator's state and display. </p>
+
+</div>
+</div>
+<a id="a943c29fd577581792f93059002337c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943c29fd577581792f93059002337c85">&#9670;&nbsp;</a></span>DisplayText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CalculatorApp.ViewModels.CalculatorViewModel.DisplayText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets the text to be displayed on the calculator screen. This property is bound to the main TextBlock in the UI. When its value changes, it notifies the UI to update. </p>
+
+</div>
+</div>
+<a id="a41b156157aca9cf81162f82c47d168c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b156157aca9cf81162f82c47d168c8">&#9670;&nbsp;</a></span>OperatorCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand CalculatorApp.ViewModels.CalculatorViewModel.OperatorCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the command to apply a mathematical operator. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>CalculatorApp/ViewModels/CalculatorViewModel.cs</li>
+<li>CalculatorApp/ViewModels/<a class="el" href="_calculator_view_model_8cs.html">CalculatorViewModel.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['setimmersivedarkmode',['SetImmersiveDarkMode',['../class_window_util.html#a4f9eb8e4df528cd1abc3804180c9022b',1,'WindowUtil']]],
-  ['setpropertyvalue',['SetPropertyValue',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#ade0f04c0f7b18dd5b170e071d5534d38',1,'XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo propertyInfo, object target, object value, System.Globalization.CultureInfo culture)'],['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#ade0f04c0f7b18dd5b170e071d5534d38',1,'XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo propertyInfo, object target, object value, System.Globalization.CultureInfo culture)'],['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#ade0f04c0f7b18dd5b170e071d5534d38',1,'XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo propertyInfo, object target, object value, System.Globalization.CultureInfo culture)']]]
+  ['observableobject',['ObservableObject',['../class_calculator_app_1_1_view_models_1_1_observable_object.html',1,'CalculatorApp::ViewModels']]],
+  ['observableobject_2ecs',['ObservableObject.cs',['../_observable_object_8cs.html',1,'']]],
+  ['onpropertychanged',['OnPropertyChanged',['../class_calculator_app_1_1_view_models_1_1_observable_object.html#af23408b2672894ef8a9871bf114aa6c2',1,'CalculatorApp::ViewModels::ObservableObject']]],
+  ['operatorcommand',['OperatorCommand',['../class_calculator_app_1_1_view_models_1_1_calculator_view_model.html#a41b156157aca9cf81162f82c47d168c8',1,'CalculatorApp::ViewModels::CalculatorViewModel']]]
 ];

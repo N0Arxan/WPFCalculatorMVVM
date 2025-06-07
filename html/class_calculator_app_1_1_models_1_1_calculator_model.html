@@ -67,24 +67,105 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_calculator_app_1_1_models_1_1_calculator_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CalculatorApp.Models.CalculatorModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p> 
+<p>Core calculation engine for the calculator. This class implements the Shunting-yard algorithm to parse and evaluate mathematical expressions from an infix notation string. It correctly handles operator precedence and provides specific error handling for invalid operations, such as division by zero.  
  <a href="class_calculator_app_1_1_models_1_1_calculator_model.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4de1361a5f36e13c9ff21231e3bdb5c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#a4de1361a5f36e13c9ff21231e3bdb5c4">Evaluate</a> (string expression)</td></tr>
-<tr class="memdesc:a4de1361a5f36e13c9ff21231e3bdb5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a given mathematical expression string.  <a href="#a4de1361a5f36e13c9ff21231e3bdb5c4">More...</a><br /></td></tr>
+<tr class="memdesc:a4de1361a5f36e13c9ff21231e3bdb5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a mathematical expression provided in infix notation.  <a href="#a4de1361a5f36e13c9ff21231e3bdb5c4">More...</a><br /></td></tr>
 <tr class="separator:a4de1361a5f36e13c9ff21231e3bdb5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af9850c42f9ef24c92b5dab43ed879f2e"><td class="memItemLeft" align="right" valign="top">Queue&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#af9850c42f9ef24c92b5dab43ed879f2e">ToReversePolishNotation</a> (string infix)</td></tr>
+<tr class="memdesc:af9850c42f9ef24c92b5dab43ed879f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an infix expression to a Reverse Polish Notation (RPN) queue. Implements the Shunting-yard algorithm to reorder tokens based on operator precedence.  <a href="#af9850c42f9ef24c92b5dab43ed879f2e">More...</a><br /></td></tr>
+<tr class="separator:af9850c42f9ef24c92b5dab43ed879f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f912fe85cf04017cf908f147ad97720"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#a7f912fe85cf04017cf908f147ad97720">EvaluateRpn</a> (Queue&lt; string &gt; rpnQueue)</td></tr>
+<tr class="memdesc:a7f912fe85cf04017cf908f147ad97720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates an expression stored in a Reverse Polish Notation (RPN) queue.  <a href="#a7f912fe85cf04017cf908f147ad97720">More...</a><br /></td></tr>
+<tr class="separator:a7f912fe85cf04017cf908f147ad97720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7eed7887918c98381a47cfb02fa87c"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#a8b7eed7887918c98381a47cfb02fa87c">Tokenize</a> (string expression)</td></tr>
+<tr class="memdesc:a8b7eed7887918c98381a47cfb02fa87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits the raw expression string into a list of numbers and operators.  <a href="#a8b7eed7887918c98381a47cfb02fa87c">More...</a><br /></td></tr>
+<tr class="separator:a8b7eed7887918c98381a47cfb02fa87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7af189d34cf3959dd4200a22beca38b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#ac7af189d34cf3959dd4200a22beca38b">ApplyOperation</a> (char op, double a, double b)</td></tr>
+<tr class="memdesc:ac7af189d34cf3959dd4200a22beca38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a single mathematical operation to two operands.  <a href="#ac7af189d34cf3959dd4200a22beca38b">More...</a><br /></td></tr>
+<tr class="separator:ac7af189d34cf3959dd4200a22beca38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa376c88fe9b588998d361213a0ebfe5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#aa376c88fe9b588998d361213a0ebfe5d">IsOperator</a> (char c)</td></tr>
+<tr class="memdesc:aa376c88fe9b588998d361213a0ebfe5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a character is a valid operator.  <a href="#aa376c88fe9b588998d361213a0ebfe5d">More...</a><br /></td></tr>
+<tr class="separator:aa376c88fe9b588998d361213a0ebfe5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8304c777e63b3d3b8475715d9440fab9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calculator_app_1_1_models_1_1_calculator_model.html#a8304c777e63b3d3b8475715d9440fab9">GetPrecedence</a> (char op)</td></tr>
+<tr class="memdesc:a8304c777e63b3d3b8475715d9440fab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the precedence of a mathematical operator.  <a href="#a8304c777e63b3d3b8475715d9440fab9">More...</a><br /></td></tr>
+<tr class="separator:a8304c777e63b3d3b8475715d9440fab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles the core calculation logic for the calculator using the Shunting-yard algorithm. This provides fine-grained control over expression evaluation, including custom error handling. </p>
+<div class="textblock"><p>Core calculation engine for the calculator. This class implements the Shunting-yard algorithm to parse and evaluate mathematical expressions from an infix notation string. It correctly handles operator precedence and provides specific error handling for invalid operations, such as division by zero. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac7af189d34cf3959dd4200a22beca38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7af189d34cf3959dd4200a22beca38b">&#9670;&nbsp;</a></span>ApplyOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CalculatorApp.Models.CalculatorModel.ApplyOperation </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies a single mathematical operation to two operands. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td>The character representing the operator (+, -, ×, ÷).</td></tr>
+    <tr><td class="paramname">a</td><td>The first operand (left-hand side).</td></tr>
+    <tr><td class="paramname">b</td><td>The second operand (right-hand side).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">DivideByZeroException</td><td>Thrown specifically when attempting to divide by zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4de1361a5f36e13c9ff21231e3bdb5c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4de1361a5f36e13c9ff21231e3bdb5c4">&#9670;&nbsp;</a></span>Evaluate()</h2>
 
@@ -109,19 +190,200 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluates a given mathematical expression string. </p>
+<p>Evaluates a mathematical expression provided in infix notation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">expression</td><td>The infix mathematical expression (e.g., "5*2+10").</td></tr>
+    <tr><td class="paramname">expression</td><td>The mathematical expression string (e.g., "3+5*2").</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the calculation as a double.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A double representing the calculated result.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown if the expression is malformed, contains a syntax error, or involves an invalid operation like division by zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f912fe85cf04017cf908f147ad97720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f912fe85cf04017cf908f147ad97720">&#9670;&nbsp;</a></span>EvaluateRpn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CalculatorApp.Models.CalculatorModel.EvaluateRpn </td>
+          <td>(</td>
+          <td class="paramtype">Queue&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>rpnQueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluates an expression stored in a Reverse Polish Notation (RPN) queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rpnQueue</td><td>The queue of tokens in RPN format.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The final calculated result as a double.</dd></dl>
+
+</div>
+</div>
+<a id="a8304c777e63b3d3b8475715d9440fab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8304c777e63b3d3b8475715d9440fab9">&#9670;&nbsp;</a></span>GetPrecedence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CalculatorApp.Models.CalculatorModel.GetPrecedence </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>op</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines the precedence of a mathematical operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td>The operator character.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing precedence (2 for ×/÷, 1 for +/-).</dd></dl>
+
+</div>
+</div>
+<a id="aa376c88fe9b588998d361213a0ebfe5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa376c88fe9b588998d361213a0ebfe5d">&#9670;&nbsp;</a></span>IsOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CalculatorApp.Models.CalculatorModel.IsOperator </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a character is a valid operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the character is one of +, -, ×, or ÷.</dd></dl>
+
+</div>
+</div>
+<a id="a8b7eed7887918c98381a47cfb02fa87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7eed7887918c98381a47cfb02fa87c">&#9670;&nbsp;</a></span>Tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; CalculatorApp.Models.CalculatorModel.Tokenize </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Splits the raw expression string into a list of numbers and operators. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>The raw input string from the calculator display.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of strings, where each string is a number or an operator.</dd></dl>
+
+</div>
+</div>
+<a id="af9850c42f9ef24c92b5dab43ed879f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9850c42f9ef24c92b5dab43ed879f2e">&#9670;&nbsp;</a></span>ToReversePolishNotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Queue&lt;string&gt; CalculatorApp.Models.CalculatorModel.ToReversePolishNotation </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>infix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts an infix expression to a Reverse Polish Notation (RPN) queue. Implements the Shunting-yard algorithm to reorder tokens based on operator precedence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infix</td><td>The expression string in infix notation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A queue of strings representing the expression in RPN.</dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>CalculatorApp/Models/CalculatorModel.cs</li>
+<li>CalculatorApp/Models/<a class="el" href="_calculator_model_8cs.html">CalculatorModel.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
